@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 import plotly.graph_objects as go
 import plotly.express as px
 
-def load_model(model_path='/Users/nikhilyadav/Desktop/anomaly-detection-app/random_cred.jb'):
+def load_model(model_path='random_cred.jb'):
     """Load the trained anomaly detection model"""
     try:
         model = joblib.load(model_path)
@@ -22,7 +22,7 @@ def load_model(model_path='/Users/nikhilyadav/Desktop/anomaly-detection-app/rand
     except Exception as e:
         raise Exception(f"❌ Error loading model: {str(e)}")
 
-def load_data(data_path='/Users/nikhilyadav/Desktop/anomaly-detection-app/credit card.csv'):
+def load_data(data_path='credit card.csv'):
     """Load and preprocess the dataset"""
     try:
         df = pd.read_csv(data_path)
